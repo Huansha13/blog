@@ -1,0 +1,48 @@
+.container {
+  padding: 20px 0;
+}
+.mat-card {
+  background: white;
+  color: black;
+  width: 80%;
+  margin:auto;
+  padding: 2%;
+
+  .mat-card-header {
+    display: block !important;
+  }
+  .mat-card-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .mat-card-content {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    p.content {
+      text-align: center;
+    }
+  }
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+
+.align-center{
+  text-align: center;
+  clear: both;
+  display: block;
+  margin: 6px auto;
+}
+
+.txt-loading {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}

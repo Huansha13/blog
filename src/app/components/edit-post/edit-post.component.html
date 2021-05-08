@@ -1,0 +1,59 @@
+<div class="new-post-container">
+  <form [formGroup]="editPostForm" (ngSubmit)="editPost(editPostForm.value)">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Tile post" formControlName="titlePost" required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Content</mat-label>
+        <input matInput placeholder="Content post" formControlName="contentPost" required>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-select placeholder="Tags" multiple formControlName="tagsPost" required>
+          <mat-option value="life">Life</mat-option>
+          <mat-option value="sport">Sport</mat-option>
+          <mat-option value="beauty">Beauty</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+    <div class="container__input__file">
+      <div class="custom__file">
+        <input type="file" accept="image/*" hidden name="image" formControlName="imagePost" #fileUploader (change)="handleImg($event)" required>
+        <a mat-flat-button (click)="fileUploader.click()">
+          <mat-icon>add_photo_alternate</mat-icon>
+          Subir Foto
+        </a>
+      </div>
+    </div>
+    <br>
+    <div class="container__button">
+      <p>
+        <button type="submit" mat-flat-button color="primary">Save</button>
+        &nbsp;
+        <button mat-dialog-close mat-flat-button color="warn">Cancelar</button>
+      </p>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

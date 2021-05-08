@@ -1,0 +1,51 @@
+.new-post-container {
+  display: flex;
+  flex-direction: column;
+  form {
+    margin-bottom: 20px;
+    max-width: 500px;
+    width: 100%;
+    .custom__file {
+      border:  1px solid #ccc;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 10px;
+      a {
+        width: 100%;
+        border-radius: 0;
+        height: 100%;
+      }
+    }
+
+    mat-form-field {
+      width: 100%
+    }
+  }
+}
+.container__input__file {
+  min-width: 500px;
+}
+::ng-deep {
+  .cdk-overlay-pane {
+    transform: translateX(-33px) translateY(39px) !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

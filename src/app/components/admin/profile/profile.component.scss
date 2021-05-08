@@ -1,0 +1,41 @@
+mat-card {
+  display: flex;
+}
+input, mat-card-content, mat-form-field {
+  width: 100% !important;
+}
+.mat-card-header {
+  margin-right: 10px;
+}
+.mat__dialog_actions {
+  display: flex;
+  justify-content: center;
+}
+img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.label {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  p {
+    position: absolute;
+    width: 100%;
+    background: rgba(123,31,162, 0.7);
+    color: white;
+    text-transform: uppercase;
+    transition: all .5s ease;
+  }
+}
+.bottom {
+  p {
+    bottom: -50%;
+  }
+  &:hover p {
+    bottom: 0%;
+  }
+}

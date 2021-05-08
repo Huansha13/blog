@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSaveUser(profileForm.value)" [formGroup]="profileForm">
+  <mat-card>
+    <mat-card-header>
+      <div class="label bottom">
+        <p>Change</p>
+        <img [src]="currentImage" alt="" (click)="inputIgeProfile.click()">
+        <input type="file" hidden #inputIgeProfile formControlName="photoURL" (change)="handleImg($event)">
+<!--        <span>{{currentImage}}</span>-->
+        <span>{{profileForm.value | json}}</span>
+        <span></span>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Name" formControlName="displayName">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+      </p>
+      <div class="mat__dialog_actions">
+        <button type="submit" mat-stroked-button color="primary">Save</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>
